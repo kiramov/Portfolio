@@ -36,7 +36,7 @@
     }
     &__block {
         position: relative;
-        //eft: -100%;
+        //left: -100%;
         width: 345px;
         background-color: $main-color;
         height: 100%;
@@ -76,10 +76,12 @@
         &:hover {
             &:before {
                 background-color: #fff;
+                border: none;
             }
         }
         a {
             color: #fff;
+            text-decoration: none;
         }
     }
     &__social {
