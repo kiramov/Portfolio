@@ -9,6 +9,13 @@
     color: $main-color;
     height: 340px;
     z-index: 3;
+    &__link {
+        &:hover {
+            svg path {
+                fill: #000;
+            }
+        }
+    }
     &__divider {
         width: 2px;
         height: 70px;
