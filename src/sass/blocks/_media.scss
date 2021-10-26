@@ -22,6 +22,24 @@
             }
         }
     }
+    .resume {
+        &__wrapper {
+            grid-template-columns: repeat(2,380px);
+            column-gap: 60px;
+        }
+    }
+    .skills {
+        &__items {
+            padding: 0 60px;
+            grid-template: repeat(3,minmax(270px,auto))/repeat(3,270px);
+        }
+        &__ratings {
+            grid-template: repeat(2, minmax(70px, auto))/repeat(3, 290px);
+        }
+        &__ratings-line {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -34,6 +52,7 @@
         }
     }
     .about {
+        padding-top: 90px;
         &__wrapper {
             grid-template-columns: 300px 380px;
         }
@@ -44,6 +63,25 @@
                 grid-template-columns: 40px 320px;
                 column-gap: 20px;
             }
+        }
+    }
+    .resume {
+        padding-top: 90px;
+        &__wrapper {
+            padding-top: 48px;
+            grid-template-columns: repeat(2, 340px);
+            column-gap: 40px;
+
+        }
+    }
+    .skills {
+        &__items {
+            padding: 0 83px;
+            grid-template: repeat(4,minmax(270px,auto))/repeat(2,270px);
+        }
+        &__ratings {
+            grid-template: repeat(2,minmax(70px,auto))/repeat(2,335px);
+            column-gap: 50px;
         }
     }
 }
@@ -77,6 +115,27 @@
                 grid-template-columns:  40px 200px;
                 column-gap: 20px;
             }
+        }
+    }
+    .resume {
+        &__wrapper {
+            padding: 40px 0px 0px 0px;
+            grid-template-columns: 1fr;
+            column-gap: unset;
+        }
+    }
+    .skills {
+        &__items {
+            padding: 0;
+            grid-template: repeat(4,minmax(260px,auto))/repeat(2,260px);
+            gap: 20px;
+        }
+        &__item {
+            padding: 20px 20px 20px 20px;
+        }
+        &__ratings {
+            grid-template-columns: 1fr;
+            grid-template-rows: 70px;
         }
     }
 }
@@ -115,6 +174,15 @@
         }
         &__skills {
             grid-template-columns: 1fr;
+        }
+    }
+    .skills {
+        &__items {
+            margin: 0 10px;
+            grid-template-columns: 1fr;
+        }
+        &__item {
+            padding: 30px 30px 25px 30px;
         }
     }
 }
