@@ -24,20 +24,41 @@
     }
     .resume {
         &__wrapper {
-            grid-template-columns: repeat(2,380px);
-            column-gap: 60px;
+            padding: 40px 20px 0 20px;
+            column-gap: 80px;
         }
     }
     .skills {
         &__items {
-            padding: 0 60px;
-            grid-template: repeat(3,minmax(270px,auto))/repeat(3,270px);
+            grid-template-columns: repeat(auto-fit, 270px);
+            justify-content: space-between;
         }
         &__ratings {
-            grid-template: repeat(2, minmax(70px, auto))/repeat(3, 290px);
+            grid-template-columns: repeat(auto-fit, 350px);
+            grid-auto-rows: minmax(70px, auto);
+            justify-content: space-between;
+            padding: 0 30px;
         }
-        &__ratings-line {
-            width: 100%;
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 35px;
+            .horizontal,  .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+    .contacts {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: 400px 520px;
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2, 250px);
         }
     }
 }
@@ -49,7 +70,12 @@
     .title {
         &_fz36 {
             font-size: 30px;
+            line-height: 42px;
+            margin-top: 26px;
         }
+    }
+    .divider {
+        margin:15px auto 0 auto;
     }
     .about {
         padding-top: 90px;
@@ -76,12 +102,22 @@
     }
     .skills {
         &__items {
-            padding: 0 83px;
-            grid-template: repeat(4,minmax(270px,auto))/repeat(2,270px);
+            padding: 0 20px;
         }
         &__ratings {
-            grid-template: repeat(2,minmax(70px,auto))/repeat(2,335px);
-            column-gap: 50px;
+            grid-template-columns: repeat(auto-fit, 320px);
+            justify-content: space-between;
+            padding: 0;
+            column-gap: 0;
+            &-line {
+                width: 100%;
+            }
+        }
+    }
+    .price {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 340px);
+            padding: 0;
         }
     }
 }
@@ -118,24 +154,38 @@
         }
     }
     .resume {
+        padding-top: 40px;
         &__wrapper {
-            padding: 40px 0px 0px 0px;
             grid-template-columns: 1fr;
-            column-gap: unset;
+            column-gap: 60px;
+            row-gap: 40px;
         }
     }
     .skills {
+        padding-top: 40px;
         &__items {
             padding: 0;
-            grid-template: repeat(4,minmax(260px,auto))/repeat(2,260px);
+            justify-content: center;
             gap: 20px;
         }
-        &__item {
-            padding: 20px 20px 20px 20px;
-        }
         &__ratings {
-            grid-template-columns: 1fr;
-            grid-template-rows: 70px;
+            grid-template-columns: repeat(auto-fit, 320px);
+            grid-auto-rows: minmax(70px, auto);
+            justify-content: center;
+            margin-top: 40px;
+            &-line {
+                width: 100%;
+            }
+        }
+    }
+    .portfolio {
+        padding-top: 40px;
+    }
+    .price {
+        padding-top: 40px;
+        &__wrapper {
+            margin-top: 20px;
+            justify-content: center
         }
     }
 }
@@ -176,13 +226,22 @@
             grid-template-columns: 1fr;
         }
     }
+    .resume {
+        &__wrapper {
+            padding: 40px 5px 0 5px;
+        }
+    }
     .skills {
         &__items {
-            margin: 0 10px;
-            grid-template-columns: 1fr;
+            margin-top: 20px;
         }
-        &__item {
-            padding: 30px 30px 25px 30px;
+        &__ratings {
+            grid-template-columns: repeat(auto-fit,300px);
+        }
+    }
+    .price {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 295px);
         }
     }
 }
